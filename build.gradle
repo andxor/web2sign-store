@@ -1,9 +1,10 @@
-apply from: axo_common + '/svn.gradle'
-apply plugin: 'war'
-apply plugin: 'eclipse'
+plugins {
+    id 'war'
+    id 'com.palantir.git-version' version '0.12.2'
+}
 
 group = 'com.andxor'
-eclipse.project.name = project.name.replaceFirst("^andxor-", "")
+version gitVersion()
 
 compileJava {
     if (JavaVersion.current() <= JavaVersion.VERSION_1_8) {
@@ -12,10 +13,6 @@ compileJava {
     } else
         options.release = 8
     options.encoding = 'UTF-8'
-}
-
-allprojects {
-    version = getSvnRevision()
 }
 
 sourceSets {
@@ -33,7 +30,6 @@ sourceSets {
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 configurations.all {
@@ -57,8 +53,9 @@ war {
 
 task writeVersion {
     doLast {
-        def b = buildProps();
-        file('WebContent/version.txt').text = "Revision: ${b.revision}\nDate: ${b.date}\n";
+        def b = versionDetails()
+        def date = java.time.Instant.now()
+        file('WebContent/version.txt').text = "Revision: ${b.lastTag}-${b.commitDistance}-${b.gitHash}\nBuild: ${date}\nCommit: ${b.gitHashFull}\nBranch: ${b.branchName}\n"
     }
 }
-tasks.processResources.dependsOn 'writeVersion' // to include svn.properties in Java resources
+tasks.war.dependsOn writeVersion
