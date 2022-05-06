@@ -1,0 +1,236 @@
+{
+    "url": "/w2s/?token=demo",
+    "root": "/home/lapo/svn/java/web2sign/trunk/doc/",
+    "files": [
+        {
+            "filename": "Contratto_AssicurativoSign.pdf",
+            "hash": "17b02e47444dd43669706c075d4d627c877c487e",
+            "signature": {
+                "*def": {
+                    "java": true,
+                    "tablet": "yes",
+                    "graphometric": "",
+                },
+                "*add": {
+                    "tablet": null,
+                    "userChoice": true,
+                    "graphometric": "Lapo",
+                    "hsm": null,
+                    "empty": false,
+                },
+                "Signature1": {
+                    "java": false,
+                    "graphometric": null,
+                    "simple": "Mario Rossi",
+                    "directClick": true,
+                },
+                "Signature3": {
+                    "graphometric": "Mario Rossi",
+                    "directClick": true,
+                    "needPressure": true,
+                },
+                "SignatureZ": {
+                    "graphometric": "Novello Nuovi",
+                    "create": [ 1, 11.25, 20.65, 76.25, 32.9 ]
+                },
+            },
+        },
+        {
+            "filename": "CUD_2012_esempio.pdf",
+            "hash": "e3f713608b27c297e4986b2d48535bbad5dfe4e1",
+            "signature": {
+                "*def": {
+                    "enabled": false,
+                    "geoloc": true
+                },
+                "*add": {
+                    "enabled": true,
+                    "image": { "url": "qr.png", "width": 30, "height": 30 },
+                    "alias": "sign-dstamp",
+                    "pin": "8fl6Yg4yD8.H"
+                },
+                "*inv": {
+                    "enabled": true,
+                    "alias": "Test1",
+                    "pin": "123456",
+                    "tablet": "yes",
+                },
+                "Signature1": {
+                    "enabled": true,
+                    "userChoice": true,
+                    "alias": "Test1",
+                    "graphometric": "Prova Multipla",
+                    "java": true
+                },
+                "Signature3": {
+                    "enabled": true,
+                    "alias": "Test1",
+                    "pin": "123456",
+                    "tablet": "yes",
+                },
+                "Signature4": {
+                    "enabled": true,
+                    "tablet": "yes",
+                    "java": true,
+                    "signingTime": 1311909255000,
+                    "alias": "Test2",
+                    "pin": "123456"
+                },
+                "Signature5": {
+                    "enabled": true
+                },
+            }
+        },
+        {
+            "filename": "Accordo per Bando CTS-signed.pdf",
+            "hash": "29deafe31c6cfe2a9f3db31871635d06ecce6ca6",
+            "signature": {
+                "*inv": {
+                    "enabled": false
+                },
+                "*add": {
+                    "enabled": false
+                }
+            }
+        },
+        {
+            "filename": "cedolino-signed.pdf",
+            "hash": "58baee3b480557ae1268281b7d11f3d9ef7cf7a3",
+            "signature": {
+                "*add": {
+                    "enabled": true,
+                    "image": { "url": "qr.png", "width": 30, "height": 30 },
+                    "alias": "Test1",
+                    "pin": "123456"
+                }
+            }
+        },
+        {
+            "filename": "nota spese.pdf",
+            "hash": "e114f2c4f402475b0dfc9227705b66b0299405f3",
+            "signature": {
+                "*def": {
+                    "add": true,
+                    "alias": "Test1",
+                    "keyCache": 120
+                }
+            }
+        },
+        {
+            "filename": "F24-Esempio.pdf",
+            "hash": "e214aebb8272c82201f6aefb9f39b3850e05cde8",
+            "signature": {
+                "*def": {
+                    "add": true,
+                    "tablet": "yes",
+                    "graphometric": ""
+                }
+            }
+        },
+        {
+            "filename": "PostgreSQL-and-NoSQL.pdf",
+            "hash": "6eea9fdb0a4a0be6163d02996c9efa5e11bd817f"
+        },
+        {
+            "filename": "Comcast - IPv6_management.pdf",
+            "hash": "f53ed41a111a8e9f4d5cf1bbe70946bce6688383"
+        },
+        {
+            "filename": "disk_failures.pdf",
+            "hash": "4daf3b051a7611180585c7b7839b1cb475d8491d",
+            "signature": {
+                "*def": {
+                    "enabled": true,
+                    "userChoice": true,
+                    "hsm": null,
+                }
+            }
+        },
+        {
+            "filename": "disk_failures.pdf.p7m",
+            "hash": "104beccc436a0e73cc1c1d8cea13ebbe52cf79dc",
+            "signature": {
+                "*def": {
+                    "enabled": false,
+                }
+            }
+        },
+        { 
+            "filename": "PDFReference.pdf",
+            "hash": "440d65356e79ea87ca6b30ce4ca06e005a33fb61"
+        },
+        { 
+            "filename": "linee_guida_ANORC_Impronta_AdE_annotazioni.pdf",
+            "hash": "6001975c5f033f498d5f1b3117add5646f34406c"
+        },
+        {
+            "filename": "testGrafoCA.pdf",
+            "hash": "79c3138d5088dbb3c809a413e3702fd51876c48d"
+        },
+        {
+            "filename": "scm.pdf",
+            "hash": "0731f20f78df6c90232fd68ecf8581fd382104e1"
+        },
+        {
+            "filename": "rotate_pages.pdf",
+            "hash": "41e04b3b120479e8f0b4d35899ef938863c6f973"
+        },
+        {
+            "filename": "nota-rossa.pdf",
+            "hash": "19d77a456378bf246d2fa4ec74724aabda13a54f"
+        },
+        {
+            "filename": "anag_fatca.pdf",
+            "hash": "c6855fe7df9bcc66983f56319b6ddf8bcba990a4",
+            "signature":{"*def":{"graphometric":"","java":true,"enabled":false},"FIRMA_NDG1_1":{"graphometric":"PAOLO CALIGOLA","java":true,"enabled":true},"FIRMA_PROM_1":{"graphometric":"Alfonso Meomartini","java":true,"enabled":true}}
+        },
+        {
+            "filename": "fatca.pdf",
+            "hash": "127e4937ef15f5f7ac33e6d43b043887d993980d",
+            "signature":{"*def":{"graphometric":"","java":true,"enabled":false},"FIRMA_NDG1_1":{"graphometric":"PAOLO CALIGOLA","java":true,"enabled":true},"FIRMA_PROM_1":{"graphometric":"Alfonso Meomartini","java":true,"enabled":true}}
+        },
+        {
+            "filename": "lorem1.pdf",
+            "hash": "fc10fb892d6321da3778cb39de36be08c3bcd6a5"
+        },
+        {
+            "filename": "lorem2.pdf",
+            "hash": "9324c268cc80340ff3eeb84b0f22271d0f462fb5"
+        },
+        {
+            "filename": "vuoto.pdf",
+            "hash": "b01ad75b234cde493c1062fa81933184229b6e79",
+            "signature": {
+                "*def": {
+                    "graphometric": ""
+                }
+            }
+        },
+        {
+            "filename": "testVuoto.pdf",
+            "hash": "16b4021822e276496d9db70fba2ef3ac3388693d",
+            "signature": {
+                "*def": {
+                    "graphometric": ""
+                }
+            }
+        },
+        {
+            "filename": "DARAG.pdf",
+            "hash": "538b8b6857b4598f8813769dc48ed70e2bfedab4",
+        },
+        {
+            "filename": "DARAG_firmato.pdf",
+            "hash": "1c377e7e58588aa1661c960fb77e299bd22051d8",
+        },
+        {
+            "filename": "number-date.pdf",
+            "hash": "c7bc5bec2c4e7c9261d975a95387bb91ca750fc3adedb4b8f3fc7927b5158f5b",
+            "signature": {
+                "*form": {
+                    "*def": { "enabled": true }
+                }
+            },
+        },
+    ]
+}

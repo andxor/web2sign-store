@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <append>true</append>
+    <file>/data/w2s/w2sDemo.log</file>
+    <encoder>
+      <charset>UTF-8</charset>
+      <pattern>%-5p %d [%t] %c{1} - %m%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="FILE" />
+  </appender>
+  <logger name="com.andxor.pdf.font.NGNFont" level="OFF"/>
+  <logger name="com.andxor" level="DEBUG">
+    <appender-ref ref="ASYNC"/>
+  </logger>
+  <root level="INFO"/>
+</configuration>

@@ -1,0 +1,64 @@
+apply from: axo_common + '/svn.gradle'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+
+group = 'com.andxor'
+eclipse.project.name = project.name.replaceFirst("^andxor-", "")
+
+compileJava {
+    if (JavaVersion.current() <= JavaVersion.VERSION_1_8) {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    } else
+        options.release = 8
+    options.encoding = 'UTF-8'
+}
+
+allprojects {
+    version = getSvnRevision()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src'
+            include 'logback.xml'
+            include 'config.json'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (it.requested.name == 'commons-logging')
+            it.useTarget 'org.slf4j:jcl-over-slf4j:1.7.+'
+    }
+}
+
+dependencies {
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.+', {
+        exclude group: 'com.sun.mail'
+    }
+}
+
+war {
+    webXml = file('etc/web.xml')
+    from('WebContent')
+}
+
+task writeVersion {
+    doLast {
+        def b = buildProps();
+        file('WebContent/version.txt').text = "Revision: ${b.revision}\nDate: ${b.date}\n";
+    }
+}
+tasks.processResources.dependsOn 'writeVersion' // to include svn.properties in Java resources
